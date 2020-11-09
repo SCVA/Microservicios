@@ -11,7 +11,7 @@
 </ol>
 <b>Descripción</b>
 <br>
-Desarrollado en PHP5 POO, arquitectura MVC e interacción con una base de datos MySQL.
+Arquitectura Microservicios, relaciona una aplicación desarrollada en PHP5 POO, MVC e interacción con una base de datos MySQL.
 <br>
 <b>Tecnologías Usadas</b>
 <ol>
