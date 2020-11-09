@@ -9,3 +9,11 @@
 <ol>
    
 </ol>
+<b>Descripción</b>
+Desarrollado en PHP5 POO, arquitectura MVC e interacción con una base de datos MySQL.
+<b>Tecnologías Usadas</b>
+<ol>
+   <li>HTML/CSS/Javascript
+   <li>PHP5
+   <li>MySQL
+</ol>
