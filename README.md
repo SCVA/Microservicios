@@ -10,12 +10,12 @@
   <li>Iniciar</li>
   <ol>
     <li>docker-compose up -d --build</li>
-    <li>La aplicación esta alojada en la dirección http://localhost:8080</li>
+    <li>La aplicación esta alojada en la dirección <a>http://localhost:8080</a></li>
     <ol>
       <li>Usuario: 99009009</li>
       <li>Contraseña: 123456</li>
     </ol>
-    <li>El administrador de mysql, phpmyadmin, esta alojado en la dirección http://localhost:8181</li>
+    <li>El administrador de mysql, phpmyadmin, esta alojado en la dirección <a>http://localhost:8181</a></li>
   </ol>
   <li>Detener</li>
   <ol>
