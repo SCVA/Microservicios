@@ -7,20 +7,22 @@
 </ol>
 <b>Instrucciones</b>
 <ol>
-<li>Iniciar</li>
-<ol>
-<li>docker-compose up -d --build</li>
-<li>La aplicación esta alojada en la dirección http://localhost:8080</li>
-<li>Usuario: 99009009</li>
-<li>Contraseña: 123456</li>
-<li>El administrador de mysql, phpmyadmin, esta alojado en la dirección http://localhost:8181</li>
-</ol>
-<li>Detener</li>
-<ol>
-<li>docker-compose down</li>
-<li>docker-compose kill</li>
-<li>docker-compose rm</li>
-</ol>
+  <li>Iniciar</li>
+  <ol>
+    <li>docker-compose up -d --build</li>
+    <li>La aplicación esta alojada en la dirección http://localhost:8080</li>
+    <ol>
+      <li>Usuario: 99009009</li>
+      <li>Contraseña: 123456</li>
+    </ol>
+    <li>El administrador de mysql, phpmyadmin, esta alojado en la dirección http://localhost:8181</li>
+  </ol>
+  <li>Detener</li>
+  <ol>
+    <li>docker-compose down</li>
+    <li>docker-compose kill</li>
+    <li>docker-compose rm</li>
+  </ol>
 </ol>
 <b>Descripción</b>
 <br>
