@@ -102,8 +102,6 @@
 							<?php } else { ?>
 								<button type='button' disabled='disabled' >Nuevo</button>
 							<?php } ?>
-							<button type="button" onclick=" ">Buscar</button>
-							<button type="button" onclick=" ">Imprimir</button>
 							<button type="button" onclick=" location='index.php?cnt=Sesion&act=conectado' ">Volver</button>
 						</td>
 					</tr>

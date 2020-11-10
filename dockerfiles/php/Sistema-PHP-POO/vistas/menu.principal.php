@@ -28,15 +28,6 @@ if(!isset($_SESSION['usuarioSesion']))
 				echo $aMenu['op01']; 
 				echo $aMenu['op02'];  
 				echo $aMenu['op03'];
-				echo $aMenu['op04']; 
-				echo $aMenu['op05'];  
-				echo $aMenu['op06'];
-				echo $aMenu['op07']; 
-				echo $aMenu['op08'];  
-				echo $aMenu['op09'];
-				echo $aMenu['op10']; 
-				echo $aMenu['op11'];
-				echo $aMenu['op12'];
 				// Desconeccion
 				echo $aMenu['op20'];
 			?>

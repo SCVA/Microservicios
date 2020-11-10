@@ -27,10 +27,10 @@
 	$aRutaMod['m03']	= "";
 
 	// arreglo de las Opciones del menu
-	$aMenu['op01']		= "<article><a href='".$aRutaMod['m01']."'><img src='inc/img/imagen01.jpeg' alt='".$aNomMod['m01']."' height='50' width='50' /><p>".$aNomMod['m01']."</p></a></article>";
-	$aMenu['op02']		= "<article><a href='".$aRutaMod['m02']."'><img src='inc/img/imagen02.jpeg' alt='".$aNomMod['m02']."' height='50' width='50' /><p>".$aNomMod['m02']."</p></a></article>";
-	$aMenu['op03']		= "<article><a href='".$aRutaMod['m03']."'><img src='inc/img/imagen03.jpeg' alt='".$aNomMod['m03']."' height='50' width='50' /><p>".$aNomMod['m03']."</p></a></article>";
-	$aMenu['op20']		= "<article><a href='index.php?cnt=Sesion&act=desconecta'><img src='inc/img/imagen20.jpeg' alt='Desconectar' height='50' width='50' /><p>Desconectar</p></a></article>";
+	$aMenu['op01']		= "<article><a href='".$aRutaMod['m01']."'><img src='inc/img/perfil.png' alt='".$aNomMod['m01']."' height='50' width='50' /><p>".$aNomMod['m01']."</p></a></article>";
+	$aMenu['op02']		= "<article><a href='".$aRutaMod['m02']."'><img src='inc/img/ingNotas.png' alt='".$aNomMod['m02']."' height='50' width='50' /><p>".$aNomMod['m02']."</p></a></article>";
+	$aMenu['op03']		= "<article><a href='".$aRutaMod['m03']."'><img src='inc/img/calculo.png' alt='".$aNomMod['m03']."' height='50' width='50' /><p>".$aNomMod['m03']."</p></a></article>";
+	$aMenu['op20']		= "<article><a href='index.php?cnt=Sesion&act=desconecta'><img src='inc/img/desconectar.png' alt='Desconectar' height='50' width='50' /><p>Desconectar</p></a></article>";
 	
 	// Variables del paginador
 	$mostrarReg = 10;

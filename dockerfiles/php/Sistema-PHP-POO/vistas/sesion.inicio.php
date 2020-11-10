@@ -35,7 +35,7 @@ $sesion = "index.php?cnt=Sesion&act=conecta";
 							<td ><input type="text" name="usuario" size=11 maxlength=15 value ="<?php echo $usuario ?>" /> 
 							<td rowspan=2>
 								<figure>
-									<img src="inc/img/hacer-llave.png" width=110 height=80>
+									<img src="inc/img/seguridad.png" width=110 height=80>
 								</figure>
 							</td>
 						</tr>				
@@ -61,5 +61,5 @@ $sesion = "index.php?cnt=Sesion&act=conecta";
 		</article>
 	</section>
 	<article id="usuarios">   
-		<label><?php echo "<strong>Usuario:</strong> ..." ?></label>
+		<label><?php echo "<strong>Usuario</strong>" ?></label>
 	</article>
