@@ -40,18 +40,6 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `modulo01` enum('L','E','X') NOT NULL DEFAULT 'X',
   `modulo02` enum('L','E','X') NOT NULL DEFAULT 'X',
   `modulo03` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo04` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo05` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo06` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo07` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo08` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo09` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo10` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo11` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo12` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo13` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo14` enum('L','E','X') NOT NULL DEFAULT 'X',
-  `modulo15` enum('L','E','X') NOT NULL DEFAULT 'X',
   PRIMARY KEY (`id_usu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -59,9 +47,9 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usu`, `descrip_usu`, `clave_usu`, `activo`, `modulo01`, `modulo02`, `modulo03`, `modulo04`, `modulo05`, `modulo06`, `modulo07`, `modulo08`, `modulo09`, `modulo10`, `modulo11`, `modulo12`, `modulo13`, `modulo14`, `modulo15`) VALUES
-('10123123', 'Usuario de pruebas', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'L', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'E'),
-('99009009', 'Usuario Administrativo', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'E', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X', 'X');
+INSERT INTO `usuario` (`id_usu`, `descrip_usu`, `clave_usu`, `activo`, `modulo01`, `modulo02`, `modulo03`) VALUES
+('10123123', 'Usuario de pruebas', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'L', 'X', 'X'),
+('99009009', 'Usuario Administrativo', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'E', 'X', 'X');
 
 --
 -- Restricciones para tablas volcadas

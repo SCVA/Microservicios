@@ -31,9 +31,6 @@ class modeloPersonal {
 		} catch(Exception $e) {
 			die($e->getMessage());
 		}
-		/*$sql = "SELECT cedulaPer,nombre,dpto,tlf FROM datosPer LIMIT $inicio,$fin";
-		$resultSet = mysql_query($sql,$this->idConn);
-		return $resultSet;*/
 	}
 
 	function obtenerDatos($cedula)
@@ -52,15 +49,6 @@ class modeloPersonal {
 		} catch(Exception $e) {
 			die($e->getMessage());
 		}
-		/*$sql = "SELECT * FROM datosPer,clavePer 
-				WHERE cedulaPer = '$cedula' AND clavePer_loginPer = loginPer";
-		$resultSet = mysql_query($sql,$this->idConn);
-		if($resultSet == false) {
-			$mensaje  = 'Consulta 1 fallo: ' . mysql_error() . "\n";
-			$mensaje .= 'Cual consulta: ' . $sql;
-			echo $mensaje;
-			exit();
-		} else return $resultSet;*/
 	}
 
 	function contarRegistro()
@@ -78,9 +66,6 @@ class modeloPersonal {
 		} catch (Exception $e) {
 			die($e->getMessage());
 		}
-		/*$sql = "SELECT * FROM datosPer"; // WHERE cedulaPer = '$cedula' ";
-		$resultSet = mysql_query($sql,$this->idConn);
-		return mysql_num_rows($resultSet);*/
 	}
 
 	function insertar($cedula,$nombre,$cargo,$dpto,$tlf,$correo,$nivel,$clave)

@@ -17,13 +17,6 @@ class Usuario
 		// LECTURA DE LA TABLA usuario
 		$oUsuario = new modeloUsuario();
 		$rs = $oUsuario->leerTodo(0,$mostrarReg);
-		
-		//Transforma el resultado $rs en un arreglo asociativo
-		/*$item = array();
-		while ($rows = $rs) 
-		{
-			$item[] = $rows;
-		}*/
 
 		// CALCULAR NUMERO DE PAGINAS
 		$ultimoReg = $oUsuario->contarRegistro();
@@ -82,13 +75,6 @@ class Usuario
 		$inicioReg = ($ultimaPag-1) * $mostrarReg;
 		$rs = $oUsuario->leerTodo($inicioReg,$mostrarReg);
 		$numPag = $ultimaPag;
-		//Transforma el resultado $rs en un arreglo asociativo
-		/*$item = array();
-		while ($rows = $rs)   
-		{
-			$item[] = $rows;
-		}*/
-
 		// parametros para la vista    
 		$aTitulos['t3']             = $aNomMod['m01'];
 		$datos['aTitulos']          = $aTitulos;
@@ -140,12 +126,6 @@ class Usuario
 
 		// LECTURA DE LA TABLA usuario
 		$rs = $oUsuario->leerTodo($inicioReg,$mostrarReg); 
-		//Transforma el resultado $rs en un arreglo asociativo
-		/*$item = array();
-		while ($rows = $rs) 
-		{
-			$item[] = $rows;
-		}*/
 
 		// parametros para la vista
 		$aTitulos['t3']             = $aNomMod['m01'];
@@ -199,13 +179,6 @@ class Usuario
 
 		// LECTURA DE LA TABLA usuario
 		$rs = $oUsuario->leerTodo($inicioReg,$mostrarReg);
-		
-		//Transforma el resultado $rs en un arreglo asociativo
-		/*$item = array();
-		while ($rows = $rs)  
-		{
-			$item[] = $rows;
-		}*/
 
 		// parametros para la vista
 		$aTitulos['t3']             = $aNomMod['m01'];
@@ -246,18 +219,6 @@ class Usuario
 		$datos['mod01']             = "";
 		$datos['mod02']             = "";
 		$datos['mod03']             = "";
-		$datos['mod04']             = "";
-		$datos['mod05']             = "";
-		$datos['mod06']             = "";
-		$datos['mod07']             = "";
-		$datos['mod08']             = "";
-		$datos['mod09']             = "";
-		$datos['mod10']             = "";
-		$datos['mod11']             = "";
-		$datos['mod12']             = "";
-		$datos['mod13']             = "";
-		$datos['mod14']             = "";
-		$datos['mod15']             = "";
 		$datos['errorId']           = "";
 		$datos['errorDescrip']      = "";
 		$datos['errorClave']        = "";
@@ -313,27 +274,10 @@ class Usuario
 		$mod01             = $valores['mod01'];
 		$mod02             = $valores['mod02'];
 		$mod03             = $valores['mod03'];
-		$mod04             = $valores['mod04'];
-		$mod05             = $valores['mod05'];
-		$mod06             = $valores['mod06'];
-		$mod07             = $valores['mod07'];
-		$mod08             = $valores['mod08'];
-		$mod09             = $valores['mod09'];
-		$mod10             = $valores['mod10'];
-		$mod11             = $valores['mod11'];
-		$mod12             = $valores['mod12'];
-		$mod13             = $valores['mod13'];
-		$mod14             = $valores['mod14'];
-		$mod15             = $valores['mod15'];
 
 		session_start();
 		$valores['userNombre']        = $_SESSION['nombreSesion'];		
 		$valores['S_MOD01']           = $_SESSION['S_MOD01'];
-
-		// Pruebas aqui
-		//echo "errorId: ".$errorId." - errorDescrip: ".$errorDescrip." - ErrorModulo: ".$errorModulo;
-		//echo "<br />valores mod01: ".$valores['mod01']." - mod02: ".$valores['mod02']." - mod03: ".$valores['mod03'];
-		//echo "<br />datos mod01: ".$mod01." - mod02: ".$mod02." - mod03: ".$mod03;
 
 		// Si tiene permiso de escritura en el modulo 01
 		if ($_SESSION['S_MOD01'] == 'E' ) {
@@ -344,7 +288,7 @@ class Usuario
 			} else {
 				// Insertar datos en la tabla
 				$oUsuario = new modeloUsuario();
-				$errorIns = $oUsuario->insertar($id,$descrip,$clave,$activo,$mod01,$mod02,$mod03,$mod04,$mod05,$mod06,$mod07,$mod08,$mod09,$mod10,$mod11,$mod12,$mod13,$mod14,$mod15);
+				$errorIns = $oUsuario->insertar($id,$descrip,$clave,$activo,$mod01,$mod02,$mod03);
 				// Sino hubo error al insertar (como un id ya existente): ";//echo "$errorIns";exit();
 				if ($errorIns != false) {
 					$oSalida = new Vista("usuario.incluir.ok.php",$valores);
@@ -389,18 +333,6 @@ class Usuario
 		$mod01   = $rs['modulo01'];
 		$mod02   = $rs['modulo02'];
 		$mod03   = $rs['modulo03'];
-		$mod04   = $rs['modulo04'];
-		$mod05   = $rs['modulo05'];
-		$mod06   = $rs['modulo06'];
-		$mod07   = $rs['modulo07'];
-		$mod08   = $rs['modulo08'];
-		$mod09   = $rs['modulo09'];
-		$mod10   = $rs['modulo10'];
-		$mod11   = $rs['modulo11'];
-		$mod12   = $rs['modulo12'];
-		$mod13   = $rs['modulo13'];
-		$mod14   = $rs['modulo14'];
-		$mod15   = $rs['modulo15'];
 
 		// Parametros de la Vista
 		$aTitulos['t3']             = $aNomMod['m01'];
@@ -413,19 +345,7 @@ class Usuario
 		$datos['activo']            = $activo;
 		$datos['mod01']             = $mod01;
 		$datos['mod02']             = $mod02;
-		$datos['mod03']             = $mod03;
-		$datos['mod04']             = $mod04;
-		$datos['mod05']             = $mod05;
-		$datos['mod06']             = $mod06;
-		$datos['mod07']             = $mod07;
-		$datos['mod08']             = $mod08;
-		$datos['mod09']             = $mod09;
-		$datos['mod10']             = $mod10;
-		$datos['mod11']             = $mod11;
-		$datos['mod12']             = $mod12;
-		$datos['mod13']             = $mod13;
-		$datos['mod14']             = $mod14;
-		$datos['mod15']             = $mod15;		
+		$datos['mod03']             = $mod03;		
 		$datos['errorId']           = "";
 		$datos['errorDescrip']      = "";
 		$datos['errorClave']        = "";
@@ -461,9 +381,6 @@ class Usuario
 			$datos[$datoRecibido] = $valor;
 		}
 
-		/******************************************/
-		// Pruebas aqui
-		//echo "Id: ".$id." - Clave: ".$clave;
 		// Verificar si hay errores en las validaciones
 		$oValida = new Validar();
 		$valores = $oValida->validaUsuario($datos);
@@ -481,25 +398,10 @@ class Usuario
 		$mod01             = $valores['mod01'];
 		$mod02             = $valores['mod02'];
 		$mod03             = $valores['mod03'];
-		$mod04             = $valores['mod04'];
-		$mod05             = $valores['mod05'];
-		$mod06             = $valores['mod06'];
-		$mod07             = $valores['mod07'];
-		$mod08             = $valores['mod08'];
-		$mod09             = $valores['mod09'];
-		$mod10             = $valores['mod10'];
-		$mod11             = $valores['mod11'];
-		$mod12             = $valores['mod12'];
-		$mod13             = $valores['mod13'];
-		$mod14             = $valores['mod14'];
-		$mod15             = $valores['mod15'];
 
 		session_start();
 		$valores['userNombre']        = $_SESSION['nombreSesion'];		
 		$valores['S_MOD01']           = $_SESSION['S_MOD01'];
-
-		// Pruebas aqui
-		//echo "errorClave: ".$errorClave." - valores[Clave]: ".$valores['clave']." - Clave: ".$clave;
 
 		// Si tiene permiso de escritura en el modulo 01
 		if ($valores['S_MOD01'] == 'E' ) {
@@ -512,9 +414,9 @@ class Usuario
 				// Modificar datos en la tabla				
 				$oUsuario = new modeloUsuario();
 				if($clave != '**********') {
-					$oUsuario->modificar($idM,$descrip,$clave,$activo,$mod01,$mod02,$mod03,$mod04,$mod05,$mod06,$mod07,$mod08,$mod09,$mod10,$mod11,$mod12,$mod13,$mod14,$mod15);
+					$oUsuario->modificar($idM,$descrip,$clave,$activo,$mod01,$mod02,$mod03);
 				} else {
-					$oUsuario->modificar2($idM,$descrip,$activo,$mod01,$mod02,$mod03,$mod04,$mod05,$mod06,$mod07,$mod08,$mod09,$mod10,$mod11,$mod12,$mod13,$mod14,$mod15);
+					$oUsuario->modificar2($idM,$descrip,$activo,$mod01,$mod02,$mod03);
 				}
 				// Salida de la Vista
 				$oSalida = new Vista("usuario.modificar.ok.php",$valores); 
@@ -553,18 +455,6 @@ class Usuario
 			$mod01   = $rs['modulo01'];
 			$mod02   = $rs['modulo02'];
 			$mod03   = $rs['modulo03'];
-			$mod04   = $rs['modulo04'];
-			$mod05   = $rs['modulo05'];
-			$mod06   = $rs['modulo06'];
-			$mod07   = $rs['modulo07'];
-			$mod08   = $rs['modulo08'];
-			$mod09   = $rs['modulo09'];
-			$mod10   = $rs['modulo10'];
-			$mod11   = $rs['modulo11'];
-			$mod12   = $rs['modulo12'];
-			$mod13   = $rs['modulo13'];
-			$mod14   = $rs['modulo14'];
-			$mod15   = $rs['modulo15'];
 		//}
 
 		// Parametros de la Vista
@@ -579,18 +469,6 @@ class Usuario
 		$datos['mod01']             = $mod01;
 		$datos['mod02']             = $mod02;
 		$datos['mod03']             = $mod03;
-		$datos['mod04']             = $mod04;
-		$datos['mod05']             = $mod05;
-		$datos['mod06']             = $mod06;
-		$datos['mod07']             = $mod07;
-		$datos['mod08']             = $mod08;
-		$datos['mod09']             = $mod09;
-		$datos['mod10']             = $mod10;
-		$datos['mod11']             = $mod11;
-		$datos['mod12']             = $mod12;
-		$datos['mod13']             = $mod13;
-		$datos['mod14']             = $mod14;
-		$datos['mod15']             = $mod15;
 		$datos['errorId']           = "";
 		$datos['errorDescrip']      = "";
 		$datos['errorClave']        = "";
@@ -642,18 +520,6 @@ class Usuario
 		$datos['mod01']             = "";
 		$datos['mod02']             = "";
 		$datos['mod03']             = "";
-		$datos['mod04']             = "";
-		$datos['mod05']             = "";
-		$datos['mod06']             = "";
-		$datos['mod07']             = "";
-		$datos['mod08']             = "";
-		$datos['mod09']             = "";
-		$datos['mod10']             = "";
-		$datos['mod11']             = "";
-		$datos['mod12']             = "";
-		$datos['mod13']             = "";
-		$datos['mod14']             = "";
-		$datos['mod15']             = "";
 		session_start();
 		$datos['userNombre']        = $_SESSION['nombreSesion'];
 		$datos['S_MOD01']           = $_SESSION['S_MOD01'];

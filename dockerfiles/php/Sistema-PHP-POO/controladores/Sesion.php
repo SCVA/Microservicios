@@ -62,18 +62,6 @@ class Sesion {
 			$S_MOD01  = $rs['modulo01'];
 			$S_MOD02  = $rs['modulo02'];
 			$S_MOD03  = $rs['modulo03'];
-			$S_MOD04  = $rs['modulo04'];
-			$S_MOD05  = $rs['modulo05'];
-			$S_MOD06  = $rs['modulo06'];
-			$S_MOD07  = $rs['modulo07'];
-			$S_MOD08  = $rs['modulo08'];
-			$S_MOD09  = $rs['modulo09'];
-			$S_MOD10  = $rs['modulo10'];
-			$S_MOD11  = $rs['modulo11'];
-			$S_MOD12  = $rs['modulo12'];
-			$S_MOD13  = $rs['modulo13'];
-			$S_MOD14  = $rs['modulo14'];
-			$S_MOD15  = $rs['modulo15'];
 		}
 
 		// parametros para la vista 
@@ -95,35 +83,11 @@ class Sesion {
 				$_SESSION['S_MOD01']			= $S_MOD01;
 				$_SESSION['S_MOD02']			= $S_MOD02;
 				$_SESSION['S_MOD03']			= $S_MOD03;
-				$_SESSION['S_MOD04']			= $S_MOD04;
-				$_SESSION['S_MOD05']			= $S_MOD05;
-				$_SESSION['S_MOD06']			= $S_MOD06;
-				$_SESSION['S_MOD07']			= $S_MOD07;
-				$_SESSION['S_MOD08']			= $S_MOD08;
-				$_SESSION['S_MOD09']			= $S_MOD09;
-				$_SESSION['S_MOD10']			= $S_MOD10;
-				$_SESSION['S_MOD11']			= $S_MOD11;
-				$_SESSION['S_MOD12']			= $S_MOD12;
-				$_SESSION['S_MOD13']			= $S_MOD13;
-				$_SESSION['S_MOD14']			= $S_MOD14;
-				$_SESSION['S_MOD15']			= $S_MOD15;
 
 				// Verificar los permisos para mostrar el menu
 				if($S_MOD01 == 'X') $aMenu['op01'] = "";
 				if($S_MOD02 == 'X') $aMenu['op02'] = "";
 				if($S_MOD03 == 'X') $aMenu['op03'] = "";
-				if($S_MOD04 == 'X') $aMenu['op04'] = "";
-				if($S_MOD05 == 'X') $aMenu['op05'] = "";
-				if($S_MOD06 == 'X') $aMenu['op06'] = "";
-				if($S_MOD07 == 'X') $aMenu['op07'] = "";
-				if($S_MOD08 == 'X') $aMenu['op08'] = "";
-				if($S_MOD09 == 'X') $aMenu['op09'] = "";
-				if($S_MOD10 == 'X') $aMenu['op10'] = "";
-				if($S_MOD11 == 'X') $aMenu['op11'] = "";
-				if($S_MOD12 == 'X') $aMenu['op12'] = "";
-				if($S_MOD13 == 'X') $aMenu['op13'] = "";
-				if($S_MOD14 == 'X') $aMenu['op14'] = "";
-				if($S_MOD15 == 'X') $aMenu['op15'] = "";
 
 				$datos['aMenu']	= $aMenu;
 				
@@ -164,18 +128,6 @@ class Sesion {
 		if($_SESSION['S_MOD01'] == 'X') $aMenu['op01'] = "";
 		if($_SESSION['S_MOD02'] == 'X') $aMenu['op02'] = "";
 		if($_SESSION['S_MOD03'] == 'X') $aMenu['op03'] = "";
-		if($_SESSION['S_MOD04'] == 'X') $aMenu['op04'] = "";
-		if($_SESSION['S_MOD05'] == 'X') $aMenu['op05'] = "";
-		if($_SESSION['S_MOD06'] == 'X') $aMenu['op06'] = "";
-		if($_SESSION['S_MOD07'] == 'X') $aMenu['op07'] = "";
-		if($_SESSION['S_MOD08'] == 'X') $aMenu['op08'] = "";
-		if($_SESSION['S_MOD09'] == 'X') $aMenu['op09'] = "";
-		if($_SESSION['S_MOD10'] == 'X') $aMenu['op10'] = "";
-		if($_SESSION['S_MOD11'] == 'X') $aMenu['op11'] = "";
-		if($_SESSION['S_MOD12'] == 'X') $aMenu['op12'] = "";
-		if($_SESSION['S_MOD13'] == 'X') $aMenu['op13'] = "";
-		if($_SESSION['S_MOD14'] == 'X') $aMenu['op14'] = "";
-		if($_SESSION['S_MOD15'] == 'X') $aMenu['op15'] = "";
 		
 		$datos['aMenu']		 = $aMenu;
 		$datos['userNombre'] = $_SESSION['nombreSesion'];
