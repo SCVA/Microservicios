@@ -53,6 +53,18 @@ CREATE TABLE IF NOT EXISTS `estudiante` (
   FOREIGN KEY (`id_usu`) REFERENCES `usuario`(`id_usu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+DELIMITER |
+
+CREATE TRIGGER tgnota AFTER INSERT
+  ON usuario FOR EACH ROW BEGIN
+	IF NEW.`modulo02` <> 'X' THEN
+		INSERT INTO `estudiante` (`id_usu`) VALUES
+			(NEW.`id_usu`);
+	END IF;
+  END
+|
+
+DELIMITER ;
 --
 -- Volcado de datos para la tabla `usuario`
 --
@@ -61,8 +73,6 @@ INSERT INTO `usuario` (`id_usu`, `descrip_usu`, `clave_usu`, `activo`, `modulo01
 ('20202495000', 'Estudiante', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'L', 'E', 'E'),
 ('20202495100', 'Administrador', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'E', 'X', 'X');
 
-INSERT INTO `estudiante` (`id_usu`, `n1`, `n2`, `n3`) VALUES
-('20202495000', 5, 4, 5);
 
 --
 -- Restricciones para tablas volcadas

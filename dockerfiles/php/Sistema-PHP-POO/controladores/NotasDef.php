@@ -31,7 +31,7 @@
 				$oSalida = new Vista("notas.php",$datos); 
 			} else {
 				// Lo devuelve al inicio de sesion
-				$oSalida = new Vista("notas.inicio.php",$datos); 
+				$oSalida = new Vista("sesion.inicio.php",$datos); 
 			}
 		}
 	}

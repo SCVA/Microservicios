@@ -4,7 +4,7 @@
 	 * Type      : vista 
 	 * Function  : Ingreso notas
 	 */
-	if(!isset($_SESSION['S_MOD01']))
+	if(!isset($_SESSION['S_MOD03']))
 	{
 		header("Location: index.php?cnt=Sesion&act=inicio");
 		exit;

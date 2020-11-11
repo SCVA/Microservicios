@@ -23,7 +23,7 @@
 
 	// arreglo de las Rutas de los módulos
 	$aRutaMod['m01']	= "index.php?cnt=Usuario&act=inicio";
-	$aRutaMod['m02']	= "";
+	$aRutaMod['m02']	= "index.php?cnt=NotasIn&act=inicio";
 	$aRutaMod['m03']	= "index.php?cnt=NotasDef&act=inicio";
 
 	// arreglo de las Opciones del menu
@@ -34,20 +34,4 @@
 	
 	// Variables del paginador
 	$mostrarReg = 10;
-
-	// Combo de listas Desplegables
-	$combo_dpto  = array(
-		"1" => "Académico",
-		"2" => "Administración",
-		"3" => "Asobies",
-		"4" => "Decanato",
-		"5" => "DIN",
-		"6" => "Dpto. de TIC",
-		"7" => "Postgrado",
-		"8" => "Pregrado",
-		"9" => "Recursos Humanos",
-		"10" => "Secretaría",
-		"11" => "Servicios Generales",
-		"12" => "DAS y PC"
-	 );
 ?>
