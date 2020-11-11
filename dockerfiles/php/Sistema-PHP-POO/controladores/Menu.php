@@ -15,6 +15,7 @@
 			$datos["aTitulos"]	= $aTitulos;
 			session_start();
 			$datos["userNombre"] = $_SESSION["nombreSesion"];
+			$datos["userID"] = $_SESSION["idSesion"];
 			$datos["userNivel"] 	= $_SESSION["nivelSesion"];
 			
 			if ($datos["userNivel"] == 1 ) {

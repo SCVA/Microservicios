@@ -41,6 +41,7 @@ class Usuario
 		session_start();
 		$datos['userNombre']        = $_SESSION['nombreSesion'];
 		$datos['S_MOD01']           = $_SESSION['S_MOD01'];
+		$datos["userID"] = $_SESSION["idSesion"];
 
 		// Si tiene acceso al modulo 01
 		if ($datos['S_MOD01'] != 'X' ) {
@@ -84,6 +85,7 @@ class Usuario
 		$datos['ultimaPag']         = $ultimaPag;
 		session_start();
 		$datos['userNombre']        = $_SESSION['nombreSesion'];
+		$datos["userID"] = $_SESSION["idSesion"];
 		$datos['S_MOD01']           = $_SESSION['S_MOD01'];
 
 		// Si tiene acceso al modulo 01
@@ -137,6 +139,7 @@ class Usuario
 		session_start();
 		$datos['userNombre']        = $_SESSION['nombreSesion'];
 		$datos['S_MOD01']           = $_SESSION['S_MOD01'];
+		$datos["userID"] = $_SESSION["idSesion"];
 
 		// Si tiene acceso al modulo 01
 		if ($datos['S_MOD01'] != 'X' ) {
@@ -190,6 +193,7 @@ class Usuario
 		session_start();
 		$datos['userNombre']        = $_SESSION['nombreSesion'];
 		$datos['S_MOD01']           = $_SESSION['S_MOD01'];
+		$datos["userID"] = $_SESSION["idSesion"];
 
 		// Si tiene acceso al modulo 01
 		if ($datos['S_MOD01'] != 'X' ) {
@@ -228,6 +232,7 @@ class Usuario
 		session_start();
 		$datos['userNombre']        = $_SESSION['nombreSesion'];
 		$datos['S_MOD01']           = $_SESSION['S_MOD01'];
+		$datos["userID"] = $_SESSION["idSesion"];
 
 		// Si tiene permiso de escritura en el modulo 01
 		if ($_SESSION['S_MOD01'] == 'E' ) {
@@ -278,6 +283,7 @@ class Usuario
 		session_start();
 		$valores['userNombre']        = $_SESSION['nombreSesion'];		
 		$valores['S_MOD01']           = $_SESSION['S_MOD01'];
+		$datos["userID"] = $_SESSION["idSesion"];
 
 		// Si tiene permiso de escritura en el modulo 01
 		if ($_SESSION['S_MOD01'] == 'E' ) {
@@ -353,6 +359,7 @@ class Usuario
 		session_start();
 		$datos['userNombre']        = $_SESSION['nombreSesion'];
 		$datos['S_MOD01']           = $_SESSION['S_MOD01'];
+		$datos["userID"] = $_SESSION["idSesion"];
 
 		// Si tiene permiso de escritura en el modulo 01
 		if ($_SESSION['S_MOD01'] == 'E' ) {
@@ -402,6 +409,7 @@ class Usuario
 		session_start();
 		$valores['userNombre']        = $_SESSION['nombreSesion'];		
 		$valores['S_MOD01']           = $_SESSION['S_MOD01'];
+		$datos["userID"] = $_SESSION["idSesion"];
 
 		// Si tiene permiso de escritura en el modulo 01
 		if ($valores['S_MOD01'] == 'E' ) {
@@ -476,6 +484,7 @@ class Usuario
 		session_start();
 		$datos['userNombre']        = $_SESSION['nombreSesion'];
 		$datos['S_MOD01']           = $_SESSION['S_MOD01'];
+		$datos["userID"] = $_SESSION["idSesion"];
 
 		// Si tiene permiso de escritura en el modulo 01
 		if ($datos['S_MOD01'] == 'E' ) {
@@ -523,6 +532,7 @@ class Usuario
 		session_start();
 		$datos['userNombre']        = $_SESSION['nombreSesion'];
 		$datos['S_MOD01']           = $_SESSION['S_MOD01'];
+		$datos["userID"] = $_SESSION["idSesion"];
 
 		// Si tiene permiso de escritura en el modulo 01
 		if ($datos['S_MOD01'] == 'E' ) {

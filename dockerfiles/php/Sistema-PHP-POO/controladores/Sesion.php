@@ -18,6 +18,7 @@ class Sesion {
 		$aTitulos['t3']           = "Iniciar Sesión";
 		$datos['aTitulos']        = $aTitulos;
 		$datos['userNombre']      = "";
+		$datos['userID']      	  = "";
 
 		// Salida de la vista
 		$oSalida = new Vista("sesion.inicio.php",$datos); 
@@ -38,6 +39,7 @@ class Sesion {
 		$userNombre 	= "";
 		$descrip 		= "";
 		$errorInicio 	= "";
+		$userID		 	= "";
 	
 		// VALIDATION VARIABLES
 		$error = 0;
@@ -75,6 +77,7 @@ class Sesion {
 				session_start();
 				$_SESSION['usuarioSesion'] = $usuario;
 				$_SESSION['nombreSesion']  = $descrip;
+				$_SESSION["idSesion"] = $usuario;
 				// Defino la fecha y hora de inicio de sesión en formato aaaa-mm-dd hh:mm:ss 
 				// Esto para ir verificando el tiempo que llevara conectado el usuario.
 				$_SESSION["ultimoAcceso"]= date("Y-n-j H:i:s");
@@ -93,6 +96,7 @@ class Sesion {
 				
 				//echo "Usuario encontrado";
 				$datos['userNombre'] = $descrip;
+				$datos['userID'] = $usuario;
 
 				$oSalida = new Vista("menu.principal.php",$datos);
 			} else {
@@ -131,6 +135,7 @@ class Sesion {
 		
 		$datos['aMenu']		 = $aMenu;
 		$datos['userNombre'] = $_SESSION['nombreSesion'];
+		$datos['userID'] = $_SESSION['idSesion'];
 		
 		$oSalida = new Vista('menu.principal.php',$datos);
 	}

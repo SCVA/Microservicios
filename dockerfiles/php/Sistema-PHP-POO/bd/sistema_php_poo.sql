@@ -43,13 +43,26 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`id_usu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+DROP TABLE IF EXISTS `estudiante`;
+CREATE TABLE IF NOT EXISTS `estudiante` (
+  `id_usu` varchar(20) NOT NULL,
+  `n1` float NOT NULL DEFAULT 0,
+  `n2` float NOT NULL DEFAULT 0,
+  `n3` float NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id_usu`),
+  FOREIGN KEY (`id_usu`) REFERENCES `usuario`(`id_usu`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`id_usu`, `descrip_usu`, `clave_usu`, `activo`, `modulo01`, `modulo02`, `modulo03`) VALUES
-('10123123', 'Usuario de pruebas', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'L', 'X', 'X'),
-('99009009', 'Usuario Administrativo', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'E', 'X', 'X');
+('20202495000', 'Estudiante', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'L', 'E', 'E'),
+('20202495100', 'Administrador', 'e10adc3949ba59abbe56e057f20f883e', 'S', 'E', 'X', 'X');
+
+INSERT INTO `estudiante` (`id_usu`, `n1`, `n2`, `n3`) VALUES
+('20202495000', 5, 4, 5);
 
 --
 -- Restricciones para tablas volcadas

@@ -24,7 +24,7 @@
 	// arreglo de las Rutas de los módulos
 	$aRutaMod['m01']	= "index.php?cnt=Usuario&act=inicio";
 	$aRutaMod['m02']	= "";
-	$aRutaMod['m03']	= "";
+	$aRutaMod['m03']	= "index.php?cnt=NotasDef&act=inicio";
 
 	// arreglo de las Opciones del menu
 	$aMenu['op01']		= "<article><a href='".$aRutaMod['m01']."'><img src='inc/img/perfil.png' alt='".$aNomMod['m01']."' height='50' width='50' /><p>".$aNomMod['m01']."</p></a></article>";
